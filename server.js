@@ -28,7 +28,7 @@ app.get('/home/new', (req,res) => {
     res.render('New')
 });
 
-app.get('/home/:id', (req,res) => {
+app.get('/product/:id', (req,res) => {
         res.render('Show', {Products: coffeeData[req.params.id]});
 });
 

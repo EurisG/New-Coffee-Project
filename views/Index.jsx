@@ -15,7 +15,7 @@ class Index extends React.Component{
                                 {Products.map(( Products, i) => {
                                     return (
                                             <li>
-                                                    <a href={`/home${i}`}>{Products.name}</a><br />Price:{' '}${Products.price}<br /><br />
+                                                    <a href={`/product/${i}`}>{Products.name}</a><br />Price:{' '}${Products.price}<br /><br />
                                             </li>
 
                                     );
