@@ -1,4 +1,4 @@
-const React = require('react');
+const React = require('react')
 // const Products = require('../models/coffee');
 
 class Show extends React.Component {

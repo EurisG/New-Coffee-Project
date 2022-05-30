@@ -8,23 +8,25 @@ class Index extends React.Component{
         return(
 
                 <div>
-                        <h1>Hello Welcome</h1>
-
-                        <nav>
-                            <a href='/home/new'>Create New Product</a>
-                        </nav>
+                        <h1> Welcome Coffee Lover!</h1>
+                        <a href='/'>Back</a>
+                        <h3>Choose Item Below</h3>
                             <ul>
                                 {Products.map(( Products, i) => {
                                     return (
                                             <li>
-                                                    <a href={`/home${i}`}>{Products.name}</a><br />Price:{' '}${Products.price}
+                                                    <a href={`/home${i}`}>{Products.name}</a><br />Price:{' '}${Products.price}<br /><br />
                                             </li>
 
                                     );
                                 })}
                                 
                             </ul>
-                            <a href='/'>Back</a>
+                            <h3>Add New Product to Menu</h3>
+                        <nav>
+                            <a href='/home/new'>Create New Product</a>
+                        </nav>
+                            
                 </div>
 
         );

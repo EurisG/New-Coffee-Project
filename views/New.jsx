@@ -6,9 +6,13 @@ class New extends React.Component{
 
         return(
             <>
+            
+            <nav><br />
+                <a href="/home">Home</a><br /><br />
+            </nav>
            <form action="/home" method='POST'>
-               name: <input type="text" name='name'></input><br />
-               price: <input type="number" name="price"></input>
+               Product Name: <input type="text" name='name' placeholder='type..'></input><br /><br />
+               Product Price: <input type="text" name="price" placeholder='cost ?..'></input><br /><br />
                <input type="submit" name='' value="Create Product"/>
            </form>
     
@@ -20,9 +24,3 @@ class New extends React.Component{
 
 module.exports = New
 
-// <form action="/new" method="POST">
-// name: <input type="text" name="name" placeholder='POST'/><br/>
-// price: <input type="text" name="price" placeholder='add' /><br/>
-// {/* Is Ready To Eat: <input type="checkbox" name="readyToEat" /><br/> */}
-// <input type="submit" name="" value="Create Product"/>
-// </form>
