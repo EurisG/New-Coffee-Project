@@ -23,4 +23,5 @@ const Products = [
 
 ];
 
+// exporting our product model to other applications 
 module.exports = Products;

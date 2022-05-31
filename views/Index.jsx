@@ -1,3 +1,4 @@
+// Importing React 
 const React = require('react');
 const Products = require('../models/coffee')
 
@@ -12,6 +13,7 @@ class Index extends React.Component{
                         <a href='/'>Back</a>
                         <h3>Choose Item Below</h3>
                             <ul>
+                            
                                 {Products.map(( Products, i) => {
                                     return (
                                             <li>
