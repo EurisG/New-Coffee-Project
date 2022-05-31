@@ -7,11 +7,16 @@ class Show extends React.Component {
 
         return (
             <div>
-                <h1>Show Page</h1>
-
-                The {Products.name}{' '}cost: {' '} {Products.price}
-
+                <h1>{Products.name}</h1>
+               
                 <a href='/home'>Back</a>
+                <br />
+                <br />
+                <h3>The {Products.name}{' '}cost: {' '} ${Products.price}</h3>
+                <br />
+                
+                <br />
+                <a href='/home'>Delete from menu</a>
             </div>
 
         );

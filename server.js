@@ -36,7 +36,7 @@ app.post('/home', (req,res) => {
     Products.push(req.body)
     console.log(coffeeData)
     res.redirect('home')
-})
+});
 
 // app.delete('/home/delete', (req, res) => {
 //     res.render('')

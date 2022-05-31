@@ -2,7 +2,6 @@ const Products = [
         {
             name: 'Black Coffee',
             price: 1.05,
-
         },
 
         {
