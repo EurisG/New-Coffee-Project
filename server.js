@@ -36,13 +36,6 @@ app.get('/home/new', (req,res) => {
     res.render('New')
 });
 
-app.delete('/home/:id', (req, res) => {
-    console.log(req.params.id)
-   Products.findByIdAndDelete(req.params.id)
-       console.log("Item was deleted")
-       res.redirect('Deleted')
-    
-});
 
 // route to post new data to my home page 
 app.post('/home', (req,res) => {
@@ -57,7 +50,17 @@ app.get('/product/:id', (req,res) => {
 });
 
 
+app.delete('/product/:id/delete', (req, res) => {
+    console.log(req.params.id)
+   Products.findByIdAndDelete(req.params.id)
+       console.log("Item was deleted")
+       res.redirect('deleted')
+    
+});
 
+app.get('/home/:id/edit', (req,res) => {
+    res.render('Edit')
+})
 
 
 // Port listener 

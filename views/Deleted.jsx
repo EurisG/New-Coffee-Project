@@ -4,7 +4,7 @@ const Products = require('../models/coffee')
 class Delete extends React.Component {
 
     render() {
-        // const {Products} = this.props.Products;
+        const Products = this.props;
         return (
             <div>
 

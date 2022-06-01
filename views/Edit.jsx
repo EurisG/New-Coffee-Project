@@ -1,5 +1,4 @@
-const { Cursor } = require('mongoose');
-const React = require('react');
+const React = require('react')
 const Products = require('../models/coffee')
 
 const myBody = {
@@ -26,6 +25,7 @@ const myForm = {
     webkitBoxShadow: "0px 0px 0px 8px #000000, 0px 0px 0px 16px #4B4C4B, 0px 0px 0px 24px #828482, 0px 0px 0px 31px #B2B5B2, 0px 0px 0px 39px #DADDDA, 5px 5px 15px 5px rgba(0,0,0,0)", 
     boxShadow: "0px 0px 0px 8px #000000, 0px 0px 0px 16px #4B4C4B, 0px 0px 0px 24px #828482, 0px 0px 0px 31px #B2B5B2, 0px 0px 0px 39px #DADDDA, 5px 5px 15px 5px rgba(0,0,0,0)"
    
+   
 }
 const inside = {
     padding: "10px",
@@ -43,41 +43,38 @@ const rdText = {
     float: "right"
 }
 
-const button = {
-    padding: "5px",
-    backgroundColor: "#A3CCAB",
-    cursor: "pointer"
 
-}
-
-class New extends React.Component{
+class Edit extends React.Component {
 
     render() {
 
+
         return(
-            <>
-                <body style={myBody}>
+
+            <div>
+                 <body style={myBody}>
                     
                 
-            <nav><br />
-                <a style={rdText} href="/home">Home</a><br /><br />
-            </nav>
-            <h3 style={text}>Add New Product to Menu</h3>
-           <form  style={myForm} action="/home" method='POST'>
-               <div style={inside}>
-               Product Name: <input type="text" name='name' placeholder='type..' value={Products.name}></input><br /><br />
-               Product Price: <input type="text" name="price" placeholder='cost..' value={Products.price}></input><br /><br />
-               Product Image: <textarea type="text" name="img" placeholder='paste img address..' value={Products.img}></textarea><br /><br />
-               <input type="submit" name='' value="Create Product" style={button}/>
-               </div>
-           </form>
-       
-            </body>
-             </>
-        )
+                    <nav><br />
+                        <a style={rdText} href="/home">Home</a><br /><br />
+                    </nav>
+                    <h3 style={text}>Edit Your Product</h3>
+                   <form  style={myForm} action="/home" method='POST'>
+                       <div style={inside}>
+                       Product Name: <input type="text" name='name' placeholder='type..' value={Products.name}></input><br /><br />
+                       Product Price: <input type="text" name="price" placeholder='cost..' value={Products.price}></input><br /><br />
+                       Product Image: <textarea type="text" name="img" placeholder='paste img address..' value={Products.img}></textarea><br /><br />
+                       <input type="submit" name='' value="Create Product"/>
+                       </div>
+                   </form>
+               
+                    </body>
+
+            </div>
+
+        );
     }
 
 }
 
-module.exports = New
-
+module.exports = Edit;
