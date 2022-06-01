@@ -4,7 +4,7 @@ const React = require('react')
 class Show extends React.Component {
     render() {
         const Products = this.props.Products;
-
+        console.log(Products);
         return (
             <div>
                 <h1>{Products.name}</h1>
@@ -16,7 +16,7 @@ class Show extends React.Component {
                 <br />
                 
                 <br />
-                <a href='/home'>Delete from menu</a>
+                <a href='/home/:id/delete'>Delete from menu</a>
             </div>
 
         );

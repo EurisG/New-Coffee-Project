@@ -16,8 +16,7 @@ const Products = [
 
         {
             name: 'Machiatto',
-            price: 3.00
-
+            price: 3.00,           
         },
 
 

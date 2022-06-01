@@ -32,12 +32,16 @@ app.get('/home', (req,res) => {
 
 // route that takes you to form to create new product 
 app.get('/home/new', (req,res) => {
+    // console.log(req.params.id)
     res.render('New')
 });
 
-// route that takes you to individual product and gives you data 
-app.get('/product/:id', (req,res) => {
-        res.render('Show', {Products: coffeeData[req.params.id]});
+app.delete('/home/:id', (req, res) => {
+    console.log(req.params.id)
+   Products.findByIdAndDelete(req.params.id)
+       console.log("Item was deleted")
+       res.redirect('Deleted')
+    
 });
 
 // route to post new data to my home page 
@@ -47,9 +51,12 @@ app.post('/home', (req,res) => {
     res.redirect('home')
 });
 
-// app.delete('/home/delete', (req, res) => {
-//     res.render('')
-// })
+// route that takes you to individual product and gives you data 
+app.get('/product/:id', (req,res) => {
+    res.render('Show', {Products: coffeeData[req.params.id]});
+});
+
+
 
 
 
@@ -58,3 +65,7 @@ const PORT = 3000;
 app.listen(PORT, () => {
         console.log(`Listening on PORT ${PORT}...`)
 });
+
+
+
+
