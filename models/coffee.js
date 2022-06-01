@@ -2,6 +2,7 @@ const Products = [
         {
             name: 'Black Coffee',
             price: 1.05,
+            img: "https://www.healthifyme.com/blog/wp-content/uploads/2019/09/Black-coffee-feature-image.jpg"
         },
 
         {
