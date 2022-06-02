@@ -1,3 +1,4 @@
+// Model for my products 
 const Products = [
         {
             name: 'Black Coffee',

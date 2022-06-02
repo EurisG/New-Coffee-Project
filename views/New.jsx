@@ -1,3 +1,4 @@
+ // Importing react 
 const { Cursor } = require('mongoose');
 const React = require('react');
 const Products = require('../models/coffee')

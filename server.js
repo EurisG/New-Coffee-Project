@@ -49,7 +49,7 @@ app.get('/product/:id', (req,res) => {
     res.render('Show', {Products: coffeeData[req.params.id]});
 });
 
-
+// route that will delete your product 
 app.delete('/product/:id/delete', (req, res) => {
     console.log(req.params.id)
    Products.findByIdAndDelete(req.params.id)
@@ -58,7 +58,9 @@ app.delete('/product/:id/delete', (req, res) => {
     
 });
 
+// route that will edit your product 
 app.get('/home/:id/edit', (req,res) => {
+    Products.findByIdAndUpdate()
     res.render('Edit')
 })
 
