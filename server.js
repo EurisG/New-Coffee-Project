@@ -1,5 +1,6 @@
 // Importing epxress 
 const express = require('express');
+const methodOverride = require('method-override');
 const Products = require('./models/coffee')
 const app = express();
 
@@ -9,8 +10,8 @@ require('dotenv').config();
 // Setting engine to display my JSX 
 app.set('view engine', 'jsx');
 app.engine('jsx', require('express-react-views').createEngine());
-
-app.use(express.urlencoded({extended:false}));
+app.use(methodOverride('_method'));
+app.use(express.urlencoded({extended:true}));
 
 app.use((req, res, next) => {
     console.log('I run for all routes');
@@ -50,17 +51,17 @@ app.get('/product/:id', (req,res) => {
 });
 
 // route that will delete your product 
-app.delete('/product/:id/delete', (req, res) => {
+app.delete('/product/:id/delete', async (req, res) => {
     console.log(req.params.id)
-   Products.findByIdAndDelete(req.params.id)
+  const product = await Products.findByIdAndDelete(req.params.id)
        console.log("Item was deleted")
-       res.redirect('deleted')
+       res.redirect('Deleted')
     
 });
 
 // route that will edit your product 
 app.get('/home/:id/edit', (req,res) => {
-    Products.findByIdAndUpdate()
+    // Products.findByIdAndUpdate()
     res.render('Edit')
 })
 

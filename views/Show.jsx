@@ -1,5 +1,6 @@
 // Importing react 
-const React = require('react')
+const React = require('react');
+const methodOverride = require('method-override')
 // const Products = require('../models/coffee');
 
 const myBody = {
@@ -87,7 +88,9 @@ class Show extends React.Component {
                 <div  >
                 <a  style={rdText} href='/home/:id/edit'>Edit {Products.name} </a>
                 {' '}
-                <a  style={rdText} href='/product/:id/delete'>Delete {Products.name} from menu</a>
+                <form action={`/product/:id/delete/?_method=DELETE`} method="POST">
+                <a  style={rdText} href='/product/:id'>Delete {Products.name} from menu</a>
+                </form>
                 </div>
                 <div style={myFooter}>
                                 <footer >Made By : Euris Gonzalez™</footer>
